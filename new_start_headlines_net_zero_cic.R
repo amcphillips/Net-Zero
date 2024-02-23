@@ -74,5 +74,5 @@ ggplot(northern_geog, aes(fill = log(No_Companies))) + aes(geometry = geometry) 
 # creates graphs/maps by RTIC
 # ggplot2::facet_wrap("RTIC")
 
-# what is wrong with this
+# what is wrong with this?
 
