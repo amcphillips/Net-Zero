@@ -59,9 +59,9 @@ northern_geog <- geog %>%
   filter(RGN21CD %in% paste0("E1200000", 1:3))
 
 # Produce summary table of how many companies in each region and LA, total turnover, total employees
-write_excel_csv(geog[,c("LAD21NM", "RGN21NM", "No_Companies", "Employees", "Turnover")], "national.csv")
+write_excel_csv(geog[,c("LAD21NM", "RGN21NM", "No_Companies", "Employees", "Turnover")], "outputs/national.csv")
 # Produce sum of how many are in Northern regions
-write_excel_csv(northern_geog[,c("LAD21NM", "RGN21NM", "No_Companies", "Employees", "Turnover")], "northern.csv")
+write_excel_csv(northern_geog[,c("LAD21NM", "RGN21NM", "No_Companies", "Employees", "Turnover")], "outputs/northern.csv")
 
 
 #creating graphs
