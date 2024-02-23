@@ -26,11 +26,13 @@ clean_names(lad_boundaries)
 # Calculate how many LAs they are in
 
 data <- raw %>%
-  select(-LinkedIn, -Facebook, -Twitter, -Instagram, -Youtube, -LastKnownDealroomFunding) %>%
+  select(Companynumber, Companyname, BestEstimateCurrentEmployees, 
+         BestEstimateCurrentGVA, BestEstimateCurrentTurnover, Localauthoritycodes, Postcodes) %>%
   mutate(No_LAs = floor(nchar(Localauthoritycodes)/9)) %>%
   mutate(No_sites = str_count(Postcodes, ',') + 1) %>%
   mutate(Difference = case_when(No_sites - No_LAs != 0 ~ No_sites - No_LAs, No_sites - No_LAs == 0 ~ 0)) %>%
   mutate(turn_per_LA = BestEstimateCurrentTurnover/No_LAs) %>%
+  mutate(GVA_per_LA = BestEstimateCurrentGVA/No_LAs) %>%
   mutate(empl_per_LA = BestEstimateCurrentEmployees/No_LAs)
 
 # Checking difference between number of LAs and number of sites
@@ -45,7 +47,7 @@ data <- data %>%
 
 # Produce summary of how many companies in each LA, total turnover, total employees
   group_by(LAcode) %>%
-  summarise(No_Companies = n(), Turnover = sum(turn_per_LA), Employees = sum(empl_per_LA))
+  summarise(No_Companies = n(), GVA = sum(GVA_per_LA), Turnover = sum(turn_per_LA), Employees = sum(empl_per_LA))
 
 # Add geography lookups
 
@@ -59,9 +61,9 @@ northern_geog <- geog %>%
   filter(RGN21CD %in% paste0("E1200000", 1:3))
 
 # Produce summary table of how many companies in each region and LA, total turnover, total employees
-write_excel_csv(geog[,c("LAD21NM", "RGN21NM", "No_Companies", "Employees", "Turnover")], "outputs/national.csv")
+write_excel_csv(geog[,c("LAD21NM", "RGN21NM", "No_Companies", "GVA", "Turnover", "Employees")], "outputs/national.csv")
 # Produce sum of how many are in Northern regions
-write_excel_csv(northern_geog[,c("LAD21NM", "RGN21NM", "No_Companies", "Employees", "Turnover")], "outputs/northern.csv")
+write_excel_csv(northern_geog[,c("LAD21NM", "RGN21NM", "No_Companies", "GVA", "Turnover", "Employees")], "outputs/northern.csv")
 
 
 #creating graphs
