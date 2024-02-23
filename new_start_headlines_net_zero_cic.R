@@ -1,8 +1,10 @@
 install.packages("tidyverse")
 install.packages("janitor")
+install.packages("usethis")
 
 library(tidyverse)
 library(janitor)
+library(usethis)
 library(sf)
 
 # Import company list and geography files
@@ -72,4 +74,5 @@ ggplot(northern_geog, aes(fill = log(No_Companies))) + aes(geometry = geometry) 
 # creates graphs/maps by RTIC
 # ggplot2::facet_wrap("RTIC")
 
+# what is wrong with this
 
