@@ -24,14 +24,19 @@ clean_names(lad_boundaries)
 # Calculate how many regions they are in
 data <- raw %>%
   select(Companynumber, Companyname, BestEstimateCurrentEmployees, 
-         BestEstimateCurrentGVA, BestEstimateCurrentTurnover, Localauthoritycodes, Postcodes) %>%
+         BestEstimateCurrentGVA, BestEstimateCurrentTurnover, Localauthoritycodes, Postcodes, TotalInnovateUKFunding,TotalDealroomFundingMillionPounds) %>%
   mutate(No_LAs = floor(nchar(Localauthoritycodes)/9)) %>%
   mutate(No_sites = str_count(Postcodes, ',') + 1) %>%
   mutate(Difference = case_when(No_sites - No_LAs != 0 ~ No_sites - No_LAs, No_sites - No_LAs == 0 ~ 0)) %>%
   mutate(turn_per_LA = BestEstimateCurrentTurnover/No_LAs) %>%
   mutate(GVA_per_LA = BestEstimateCurrentGVA/No_LAs) %>%
   mutate(empl_per_LA = BestEstimateCurrentEmployees/No_LAs) %>%
-  mutate(GVA_per_job = BestEstimateCurrentGVA/BestEstimateCurrentEmployees)
+  mutate(GVA_per_job = BestEstimateCurrentGVA/BestEstimateCurrentEmployees) %>%
+  mutate(TotalInnovateUKFunding = replace(TotalInnovateUKFunding,is.na(TotalInnovateUKFunding),0)) %>%
+  mutate(Innovate_per_LA = TotalInnovateUKFunding/No_LAs) %>%
+  mutate(TotalDealroomFundingMillionPounds = replace(TotalDealroomFundingMillionPounds,is.na(TotalDealroomFundingMillionPounds),0)) %>%
+  mutate(TotalDealroomFunding = TotalDealroomFundingMillionPounds * 10^6) %>%
+  mutate(Dealroom_per_LA = TotalDealroomFunding/No_LAs)
 
 # Checking difference between number of LAs and number of sites
 # data2 <- data %>% arrange(desc(Difference))
@@ -45,7 +50,8 @@ data <- data %>%
   
   # Produce summary of how many companies in each LA, total turnover, total employees
   group_by(LAcode) %>%
-  summarise(No_Companies = n(), GVA = sum(GVA_per_LA), Turnover = sum(turn_per_LA), Employees = sum(empl_per_LA), GVA_job = GVA/Employees)
+  summarise(No_Companies = n(), GVA = sum(GVA_per_LA), Turnover = sum(turn_per_LA), Employees = sum(empl_per_LA), GVA_job = GVA/Employees, 
+            InnovateFunding = sum(Innovate_per_LA), DealroomFunding = sum(Dealroom_per_LA))
 
 # Need to add data for geo data for mapping
 geog2 <- inner_join(data, geog_look_up, by = c("LAcode" = "LAD21CD"))
@@ -54,7 +60,8 @@ geog2 <-
   inner_join(geog2, lad_boundaries, by = c("LAcode" = "LAD21CD")) %>%
   distinct() %>%
   group_by(RGN21NM) %>%
-  summarise(sum(No_Companies), sum(GVA), sum(Turnover), sum(Employees), GVA_job = (sum(GVA)/sum(Employees)))
+  summarise(sum(No_Companies), sum(GVA), sum(Turnover), sum(Employees), GVA_job = (sum(GVA)/sum(Employees)),
+           sum(InnovateFunding), sum(DealroomFunding))
 #Output csv of results
 # Produce summary table of how many companies in each region and LA, total turnover, total employees
 write_excel_csv(geog2, "outputs/regions.csv")
