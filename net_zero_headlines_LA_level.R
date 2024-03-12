@@ -75,11 +75,11 @@ write_excel_csv(northern_geog[,c("LAD21NM", "RGN21NM", "No_Companies", "GVA", "T
 
 #creating graphs
 
-ggplot(geog, aes(fill = GVA_job)) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous(type = "viridis") +
- theme_void() #+
+ggplot(geog, aes(fill = GVA_job)) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous(type = "viridis") + 
+  ggtitle("GVA per job in the Net Zero Economy") + theme_void() #+
 
-ggplot(northern_geog, aes(fill = GVA_job)) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous(type = "viridis") +
-  theme_void()
+ggplot(northern_geog, aes(fill = GVA_job)) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous(type = "viridis") + 
+  ggtitle("GVA per job in the Net Zero Economy") + theme_void()
 # creates graphs/maps by RTIC
 # ggplot2::facet_wrap("RTIC")
 
