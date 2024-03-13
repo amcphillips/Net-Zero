@@ -9,7 +9,7 @@ library(sf)
 
 # Import company list and geography files
 
-raw <- read_csv("Data/Full_Data_Cols.csv")
+raw <- read_csv("Data/Net_Zero_Dedup.csv")
 clean_names(raw)
 
 national <- raw %>%
