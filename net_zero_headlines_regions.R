@@ -33,10 +33,10 @@ data <- raw %>%
   mutate(empl_per_site = BestEstimateCurrentEmployees/No_sites) %>%
   mutate(GVA_per_job = BestEstimateCurrentGVA/BestEstimateCurrentEmployees) %>%
   mutate(TotalInnovateUKFunding = replace(TotalInnovateUKFunding,is.na(TotalInnovateUKFunding),0)) %>%
-  mutate(Innovate_per_LA = TotalInnovateUKFunding/No_LAs) %>%
+  mutate(Innovate_per_site = TotalInnovateUKFunding/No_sites) %>%
   mutate(TotalDealroomFundingMillionPounds = replace(TotalDealroomFundingMillionPounds,is.na(TotalDealroomFundingMillionPounds),0)) %>%
   mutate(TotalDealroomFunding = TotalDealroomFundingMillionPounds * 10^6) %>%
-  mutate(Dealroom_per_LA = TotalDealroomFunding/No_LAs)
+  mutate(Dealroom_per_site = TotalDealroomFunding/No_sites)
 
 # Checking difference between number of LAs and number of sites
 # data2 <- data %>% arrange(desc(Difference))
@@ -58,29 +58,18 @@ geog2 <- distinct(geog2)
 
 sites <- left_join(sites, geog2, by = c("ladcd" = "LAD21CD"))
 
-
-
-
-
-
-
-
-
-  
+summary <- sites %>%  
 # Produce summary of how many companies in each LA, total turnover, total employees
-  group_by(LAcode) %>%
-  summarise(No_Companies = n(), GVA = sum(GVA_per_LA), Turnover = sum(turn_per_LA), Employees = sum(empl_per_LA), GVA_job = GVA/Employees, 
-            InnovateFunding = sum(Innovate_per_LA), DealroomFunding = sum(Dealroom_per_LA))
+  group_by(ladnm) %>%
+  summarise(No_sites = n(), GVA = sum(GVA_per_site), Turnover = sum(turn_per_site), Employees = sum(empl_per_site), GVA_job = GVA/Employees, 
+            InnovateFunding = sum(Innovate_per_site), DealroomFunding = sum(Dealroom_per_site))
 
-# Need to add data for geo data for mapping
-geog2 <- inner_join(data, geog_look_up, by = c("LAcode" = "LAD21CD"), relationsh)
-
-geog2 <- 
-  inner_join(geog2, lad_boundaries, by = c("LAcode" = "LAD21CD")) %>%
+regions <- 
+  inner_join(sites, lad_boundaries, by = c("ladcd" = "LAD21CD")) %>%
   distinct() %>%
   group_by(RGN21NM) %>%
-  summarise(sum(No_Companies), sum(GVA), sum(Turnover), sum(Employees), GVA_job = (sum(GVA)/sum(Employees)),
-           sum(InnovateFunding), sum(DealroomFunding))
+  summarise(No_sites = n(), GVA = sum(GVA_per_site), Turnover = sum(turn_per_site), Employees = sum(empl_per_site), GVA_job = GVA/Employees, 
+            InnovateFunding = sum(Innovate_per_site), DealroomFunding = sum(Dealroom_per_site))
 #Output csv of results
 # Produce summary table of how many companies in each region and LA, total turnover, total employees
-write_excel_csv(geog2, "outputs/regions.csv")
+write_excel_csv(regions, "outputs/regions.csv")
