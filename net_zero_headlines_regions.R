@@ -13,9 +13,12 @@ raw <- read_csv("Data/Net_Zero_Dedup.csv")
 clean_names(raw)
 
 geog_look_up <- read_csv("Data/PCD_OA21_LSOA21_MSOA21_LAD_FEB24_UK_LU.csv") %>%
-  select(pcd7, pcd8, pcds, ladcd, ladnm)
+ select(pcd7, pcd8, pcds, ladcd, ladnm)
 #distinct(geog_look_up)
 clean_names(geog_look_up)
+
+coord <- read_csv("Data/ONSPD_FEB_2024_UK.csv") %>%
+  select(pcds, oslaua, pcon, lat, long, lep1)
 
 # Need to find region boundaries
 lad_boundaries <- read_sf("lad21buc.geojson")
@@ -50,6 +53,8 @@ sites <- data %>%
 
 sites <- left_join(sites, geog_look_up, by = c("Postcode" = "pcds"))
  # merge(x = sites, y = geog_look_up, by.x =  "Postcode", by.y = "pcds", all = FALSE)
+
+sites <- left_join(sites, coord, by = c("Postcode" = "pcds"))
 
 geog2 <- read_csv("WD21_LAD21_CTY21_RGN21_CTRY21.csv") %>%
   select(LAD21CD, LAD21NM, RGN21CD, RGN21NM)
