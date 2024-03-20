@@ -106,17 +106,17 @@ map_data <-
 ggplot(map_data, aes(fill = log(GVA))) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
   ggtitle("GVA by all sites\n of Net Zero companies") + theme_void()
 
-ggsave("outputs/GVA.png")
+ggsave("outputs/all_sites_GVA.png")
 
 ggplot(map_data, aes(fill = log(No_sites))) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
   ggtitle("Registered address of\n Net Zero companies") + theme_void()
 
-ggsave("outputs/companies.png")
+ggsave("outputs/all_sites.png")
 
 ggplot(map_data, aes(fill = log(Employees))) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
   ggtitle("Number of employees by registered\n address of Net Zero companies") + theme_void()
 
-ggsave("outputs/employees.png")
+ggsave("outputs/all_sites_employees.png")
 
 map_data2 <- 
   right_join(LA_GVA_per_job_all_sites, lad_boundaries, by = c("LAD21NM" = "LAD21NM")) %>%
@@ -126,4 +126,4 @@ map_data2 <-
 ggplot(map_data2, aes(fill = log(GVAPerJob))) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
   ggtitle("GVA per job by registered address\n of Net Zero companies") + theme_void()
 
-ggsave("outputs/GVA_per_job.png")
+ggsave("outputs/all_sites_GVA_per_job.png")

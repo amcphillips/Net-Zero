@@ -1,30 +1,14 @@
-﻿RGN21NM,No_Companies,GVAPerJob
-East Midlands, 722 ," 84,392 "
-East of England," 1,230 "," 109,032 "
-London," 2,806 "," 71,870 "
-North East, 379 ," 113,082 "
-North West," 1,124 "," 84,923 "
-Northern Ireland, 292 ," 140,274 "
-Scotland," 1,008 "," 50,841 "
-South East," 1,871 "," 107,539 "
-South West," 1,104 "," 127,018 "
-Wales, 469 ," 75,686 "
-West Midlands, 830 ," 94,211 "
-Yorkshire and The Humber, 719 ," 65,244 "
-NA, 451 ," 120,053 "
-,,
-,,
-RGN21NM,No_Companies,GVAPerJob
-East Midlands, 722 ," 84,392 "
-East of England," 1,230 "," 109,032 "
-London," 2,806 "," 71,870 "
-North East, 379 ," 113,082 "
-North West," 1,124 "," 84,923 "
-Northern Ireland, 292 ," 140,274 "
-Scotland," 1,008 "," 50,841 "
-South East," 1,871 "," 107,539 "
-South West," 1,104 "," 127,018 "
-Wales, 469 ," 75,686 "
-West Midlands, 830 ," 94,211 "
-Yorkshire and The Humber, 719 ," 65,244 "
-Total," 12,554 ",
+﻿"RGN21NM","No_Companies","GVAPerJob"
+"East Midlands",718,84449.39127429407
+"East of England",1225,109073.56605636807
+"London",2805,71869.27938077187
+"North East",378,113093.41726104417
+"North West",1223,84693.47896523595
+"Northern Ireland",292,140273.739478854
+"Scotland",1000,50417.83371399228
+"South East",1866,107559.95372010204
+"South West",1256,124176.59261829374
+"Wales",468,75756.69507866123
+"West Midlands",829,94221.01493766134
+"Yorkshire and The Humber",880,74129.71737644302
+NA,65,124893.25307891324
