@@ -12,14 +12,14 @@ library(sf)
 raw <- read_csv("Data/Net_Zero_Dedup.csv")
 clean_names(raw)
 
-postcodes <- read_csv("Data/PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU.csv") %>%
+postcodes <- read_csv("Data/PCD_OA21_LSOA21_MSOA21_LAD_FEB24_UK_LU.csv") %>%
   select(pcds, ladcd, ladnm)
 
-geo_lookup <- read_csv("WD21_LAD21_CTY21_RGN21_CTRY21.csv") %>%
-  select(LAD21CD, LAD21NM, RGN21CD, RGN21NM) %>%
+geo_lookup <- read_csv("WD_to_LAD_to_CTY_to_RGN_to_CTRY_2023.csv") %>%
+  select(LAD23CD, LAD23NM, RGN23CD, RGN23NM) %>%
   distinct()
 
-lad_boundaries <- read_sf("lad21buc.geojson")
+lad_boundaries <- read_sf("lad23buc.geojson")
 clean_names(lad_boundaries)
 
 national <- raw %>%
@@ -44,10 +44,10 @@ regions <- raw %>%
   
 regions <- left_join(regions, postcodes, by = c("Registeredpostcode" = "pcds"))
 
-regions <- left_join(regions, geo_lookup, by = c("ladcd" = "LAD21CD"))
+regions <- left_join(regions, geo_lookup, by = c("ladcd" = "LAD23CD"))
 
 regions_summary <- regions %>%
-  group_by(RGN21NM) %>%
+  group_by(RGN23NM) %>%
   summarise(No_Companies = n(), GVA = sum(BestEstimateCurrentGVA), Turnover = sum(BestEstimateCurrentTurnover), Employees = sum(BestEstimateCurrentEmployees),
             InnovateFunding = sum(TotalInnovateUKFunding, na.rm = TRUE), DealroomFunding = sum(TotalDealroomFundingMillionPounds, na.rm = TRUE)*10^6)
 
@@ -56,13 +56,13 @@ write_excel_csv(regions_summary,"outputs/region_reg_address.csv")
 regions_GVA_per_job <-regions %>%
   filter(BestEstimateCurrentGVA>0, BestEstimateCurrentEmployees>0) %>%
   mutate(GVAPerJob = BestEstimateCurrentGVA/BestEstimateCurrentEmployees) %>%
-  group_by(RGN21NM) %>%
+  group_by(RGN23NM) %>%
   summarise(No_Companies = n(), GVAPerJob = sum(BestEstimateCurrentGVA)/sum(BestEstimateCurrentEmployees))
 
 write_excel_csv(regions_GVA_per_job,"outputs/region_reg_address_GVA_per_job.csv")
 
 LA_summary <- regions %>%
-  group_by(LAD21NM) %>%
+  group_by(LAD23NM) %>%
   summarise(No_Companies = n(), GVA = sum(BestEstimateCurrentGVA), Turnover = sum(BestEstimateCurrentTurnover), Employees = sum(BestEstimateCurrentEmployees),
             InnovateFunding = sum(TotalInnovateUKFunding, na.rm = TRUE), DealroomFunding = sum(TotalDealroomFundingMillionPounds, na.rm = TRUE)*10^6)
 
@@ -71,13 +71,13 @@ write_excel_csv(LA_summary,"outputs/LAs_reg_address.csv")
 LA_GVA_per_job <-regions %>%
   filter(BestEstimateCurrentGVA>0, BestEstimateCurrentEmployees>0) %>%
   mutate(GVAPerJob = BestEstimateCurrentGVA/BestEstimateCurrentEmployees) %>%
-  group_by(LAD21NM) %>%
+  group_by(LAD23NM) %>%
   summarise(No_Companies = n(), GVAPerJob = sum(BestEstimateCurrentGVA)/sum(BestEstimateCurrentEmployees))
 
 write_excel_csv(LA_GVA_per_job,"outputs/LAs_reg_address_GVA_per_job.csv")
 
 map_data <- 
-  right_join(LA_summary, lad_boundaries, by = c("LAD21NM" = "LAD21NM")) %>%
+  right_join(LA_summary, lad_boundaries, by = c("LAD23NM" = "LAD23NM")) %>%
   replace(is.na(.), 0) %>%
   distinct()
 
@@ -98,7 +98,7 @@ ggplot(map_data, aes(fill = log(Employees))) + aes(geometry = geometry) + geom_s
 ggsave("outputs/employees.png")
 
 map_data2 <- 
-  right_join(LA_GVA_per_job, lad_boundaries, by = c("LAD21NM" = "LAD21NM")) %>%
+  right_join(LA_GVA_per_job, lad_boundaries, by = c("LAD23NM" = "LAD23NM")) %>%
   replace(is.na(.), 0) %>%
   distinct()
 

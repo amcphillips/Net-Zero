@@ -12,7 +12,7 @@ library(sf)
 raw <- read_csv("Data/Net_Zero_Dedup.csv")
 clean_names(raw)
 
-geog_look_up <- read_csv("Data/PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU.csv") %>%
+geog_look_up <- read_csv("Data/PCD_OA21_LSOA21_MSOA21_LAD_FEB24_UK_LU.csv") %>%
  select(pcd7, pcd8, pcds, ladcd, ladnm)
 #distinct(geog_look_up)
 clean_names(geog_look_up)
@@ -21,7 +21,7 @@ coord <- read_csv("Data/ONSPD_FEB_2024_UK.csv") %>%
   select(pcds, oslaua, pcon, lat, long, lep1)
 
 # Need to find region boundaries
-lad_boundaries <- read_sf("lad21buc.geojson")
+lad_boundaries <- read_sf("lad23buc.geojson")
 clean_names(lad_boundaries)
 
 # Calculate how many regions they are in
@@ -56,25 +56,25 @@ sites <- left_join(sites, geog_look_up, by = c("Postcode" = "pcds"))
 
 sites <- left_join(sites, coord, by = c("Postcode" = "pcds"))
 
-geog2 <- read_csv("WD21_LAD21_CTY21_RGN21_CTRY21.csv") %>%
-  select(LAD21CD, LAD21NM, RGN21CD, RGN21NM)
+geog2 <- read_csv("WD_to_LAD_to_CTY_to_RGN_to_CTRY_2023.csv") %>%
+  select(LAD23CD, LAD23NM, RGN23CD, RGN23NM)
 
 geog2 <- distinct(geog2)
 
-sites <- left_join(sites, geog2, by = c("ladcd" = "LAD21CD"))
+sites <- left_join(sites, geog2, by = c("ladcd" = "LAD23CD"))
 
 summary <- sites %>%  
 # Produce summary of how many companies in each LA, total turnover, total employees
-  group_by(ladnm) %>%
+  group_by(LAD23NM) %>%
   summarise(No_sites = n(), GVA = sum(GVA_per_site), Turnover = sum(turn_per_site), Employees = sum(empl_per_site), 
             InnovateFunding = sum(Innovate_per_site), DealroomFunding = sum(Dealroom_per_site))
 
 write_excel_csv(summary, "outputs/LAs_all_sites.csv")
 
 regions <- 
-  left_join(sites, lad_boundaries, by = c("ladcd" = "LAD21CD")) %>%
+  left_join(sites, lad_boundaries, by = c("ladcd" = "LAD23CD")) %>%
   distinct() %>%
-  group_by(RGN21NM) %>%
+  group_by(RGN23NM) %>%
   summarise(No_sites = n(), GVA = sum(GVA_per_site), Turnover = sum(turn_per_site), Employees = sum(empl_per_site), 
             InnovateFunding = sum(Innovate_per_site), DealroomFunding = sum(Dealroom_per_site))
 #Output csv of results
@@ -84,7 +84,7 @@ write_excel_csv(regions, "outputs/regions_all_sites.csv")
 LA_GVA_per_job_all_sites <- sites %>%
   filter(BestEstimateCurrentGVA>0, BestEstimateCurrentEmployees>0) %>%
   mutate(GVAPerJob = BestEstimateCurrentGVA/BestEstimateCurrentEmployees) %>%
-  group_by(LAD21NM) %>%
+  group_by(LAD23NM) %>%
   summarise(No_Companies = n(), GVAPerJob = sum(BestEstimateCurrentGVA)/sum(BestEstimateCurrentEmployees))
 
 write_excel_csv(LA_GVA_per_job_all_sites, "outputs/LAs_all_sites_GVA_job.csv")
@@ -92,13 +92,13 @@ write_excel_csv(LA_GVA_per_job_all_sites, "outputs/LAs_all_sites_GVA_job.csv")
 Region_GVA_per_job_all_sites <- sites %>%
   filter(BestEstimateCurrentGVA>0, BestEstimateCurrentEmployees>0) %>%
   mutate(GVAPerJob = BestEstimateCurrentGVA/BestEstimateCurrentEmployees) %>%
-  group_by(RGN21NM) %>%
+  group_by(RGN23NM) %>%
   summarise(No_Companies = n(), GVAPerJob = sum(BestEstimateCurrentGVA)/sum(BestEstimateCurrentEmployees))
 
 write_excel_csv(Region_GVA_per_job_all_sites, "outputs/regions_all_sites_GVA_job.csv")
 
 map_data <- 
-  right_join(summary, lad_boundaries, by = c("ladnm" = "LAD21NM")) %>%
+  right_join(summary, lad_boundaries, by = c("LAD23NM" = "LAD23NM")) %>%
   replace(is.na(.), 0) %>%
   distinct()
 
@@ -119,7 +119,7 @@ ggplot(map_data, aes(fill = log(Employees))) + aes(geometry = geometry) + geom_s
 ggsave("outputs/all_sites_employees.png")
 
 map_data2 <- 
-  right_join(LA_GVA_per_job_all_sites, lad_boundaries, by = c("LAD21NM" = "LAD21NM")) %>%
+  right_join(LA_GVA_per_job_all_sites, lad_boundaries, by = c("LAD23NM" = "LAD23NM")) %>%
   replace(is.na(.), 0) %>%
   distinct()
 
