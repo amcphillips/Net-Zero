@@ -12,7 +12,7 @@ library(sf)
 raw <- read_csv("Data/Net_Zero_Dedup.csv")
 clean_names(raw)
 
-geog_look_up <- read_csv("Data/PCD_OA21_LSOA21_MSOA21_LAD_FEB24_UK_LU.csv") %>%
+geog_look_up <- read_csv("Data/PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU.csv") %>%
  select(pcd7, pcd8, pcds, ladcd, ladnm)
 #distinct(geog_look_up)
 clean_names(geog_look_up)
@@ -66,15 +66,64 @@ sites <- left_join(sites, geog2, by = c("ladcd" = "LAD21CD"))
 summary <- sites %>%  
 # Produce summary of how many companies in each LA, total turnover, total employees
   group_by(ladnm) %>%
-  summarise(No_sites = n(), GVA = sum(GVA_per_site), Turnover = sum(turn_per_site), Employees = sum(empl_per_site), GVA_job = GVA/Employees, 
+  summarise(No_sites = n(), GVA = sum(GVA_per_site), Turnover = sum(turn_per_site), Employees = sum(empl_per_site), 
             InnovateFunding = sum(Innovate_per_site), DealroomFunding = sum(Dealroom_per_site))
 
+write_excel_csv(summary, "outputs/LAs_all_sites.csv")
+
 regions <- 
-  inner_join(sites, lad_boundaries, by = c("ladcd" = "LAD21CD")) %>%
+  left_join(sites, lad_boundaries, by = c("ladcd" = "LAD21CD")) %>%
   distinct() %>%
   group_by(RGN21NM) %>%
-  summarise(No_sites = n(), GVA = sum(GVA_per_site), Turnover = sum(turn_per_site), Employees = sum(empl_per_site), GVA_job = GVA/Employees, 
+  summarise(No_sites = n(), GVA = sum(GVA_per_site), Turnover = sum(turn_per_site), Employees = sum(empl_per_site), 
             InnovateFunding = sum(Innovate_per_site), DealroomFunding = sum(Dealroom_per_site))
 #Output csv of results
 # Produce summary table of how many companies in each region and LA, total turnover, total employees
-write_excel_csv(regions, "outputs/regions.csv")
+write_excel_csv(regions, "outputs/regions_all_sites.csv")
+
+LA_GVA_per_job_all_sites <- sites %>%
+  filter(BestEstimateCurrentGVA>0, BestEstimateCurrentEmployees>0) %>%
+  mutate(GVAPerJob = BestEstimateCurrentGVA/BestEstimateCurrentEmployees) %>%
+  group_by(LAD21NM) %>%
+  summarise(No_Companies = n(), GVAPerJob = sum(BestEstimateCurrentGVA)/sum(BestEstimateCurrentEmployees))
+
+write_excel_csv(LA_GVA_per_job_all_sites, "outputs/LAs_all_sites_GVA_job.csv")
+
+Region_GVA_per_job_all_sites <- sites %>%
+  filter(BestEstimateCurrentGVA>0, BestEstimateCurrentEmployees>0) %>%
+  mutate(GVAPerJob = BestEstimateCurrentGVA/BestEstimateCurrentEmployees) %>%
+  group_by(RGN21NM) %>%
+  summarise(No_Companies = n(), GVAPerJob = sum(BestEstimateCurrentGVA)/sum(BestEstimateCurrentEmployees))
+
+write_excel_csv(Region_GVA_per_job_all_sites, "outputs/regions_all_sites_GVA_job.csv")
+
+map_data <- 
+  right_join(summary, lad_boundaries, by = c("ladnm" = "LAD21NM")) %>%
+  replace(is.na(.), 0) %>%
+  distinct()
+
+
+ggplot(map_data, aes(fill = log(GVA))) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
+  ggtitle("GVA by all sites\n of Net Zero companies") + theme_void()
+
+ggsave("outputs/GVA.png")
+
+ggplot(map_data, aes(fill = log(No_sites))) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
+  ggtitle("Registered address of\n Net Zero companies") + theme_void()
+
+ggsave("outputs/companies.png")
+
+ggplot(map_data, aes(fill = log(Employees))) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
+  ggtitle("Number of employees by registered\n address of Net Zero companies") + theme_void()
+
+ggsave("outputs/employees.png")
+
+map_data2 <- 
+  right_join(LA_GVA_per_job_all_sites, lad_boundaries, by = c("LAD21NM" = "LAD21NM")) %>%
+  replace(is.na(.), 0) %>%
+  distinct()
+
+ggplot(map_data2, aes(fill = log(GVAPerJob))) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
+  ggtitle("GVA per job by registered address\n of Net Zero companies") + theme_void()
+
+ggsave("outputs/GVA_per_job.png")
