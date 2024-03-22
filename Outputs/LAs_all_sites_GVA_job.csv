@@ -1,362 +1,362 @@
-﻿"LAD23NM","No_Companies","GVAPerJob"
-"Aberdeen City",233,41703.426460027156
-"Aberdeenshire",79,30916.71452356684
-"Adur",45,39291.954496869854
-"Amber Valley",31,53899.87131139228
-"Angus",39,30770.952667669273
-"Antrim and Newtownabbey",40,77724.28026985719
-"Ards and North Down",26,59817.28202125774
-"Argyll and Bute",27,29597.624152988312
-"Armagh City, Banbridge and Craigavon",49,60642.76966698434
-"Arun",70,119533.64115866325
-"Ashfield",17,55437.0466655183
-"Ashford",70,126110.85967113668
-"Babergh",21,126749.52557895628
-"Barking and Dagenham",60,72219.71889184946
-"Barnet",126,93969.61359817906
-"Barnsley",118,64705.67083287527
-"Basildon",62,117268.19318217144
-"Basingstoke and Deane",64,44472.95696244494
-"Bassetlaw",51,68774.35668398722
-"Bath and North East Somerset",66,178249.65547730552
-"Bedford",74,65983.8818909385
-"Belfast",202,60238.94368579515
-"Bexley",61,67647.36393787511
-"Birmingham",270,83650.25936830715
-"Blaby",48,94669.94800122526
-"Blackburn with Darwen",34,74912.30244899876
-"Blackpool",29,81052.89006902752
-"Blaenau Gwent",10,79611.92898392856
-"Bolsover",10,54925.92166190982
-"Bolton",71,51468.787959683454
-"Boston",10,170260.71591488767
-"Bournemouth, Christchurch and Poole",127,66059.33640492355
-"Bracknell Forest",37,123655.2544349675
-"Bradford",114,80751.38347556248
-"Braintree",36,107769.42011725261
-"Breckland",62,106387.49943793318
-"Brent",59,111808.0970809532
-"Brentwood",40,152183.77917839575
-"Bridgend",53,56737.78397382168
-"Brighton and Hove",104,59027.92925364819
-"Bristol, City of",339,91223.81173209251
-"Broadland",41,126984.29576447842
-"Bromley",63,87443.24025701228
-"Bromsgrove",45,122305.20269593631
-"Broxbourne",60,119842.59205693817
-"Broxtowe",30,75142.4982115368
-"Buckinghamshire",264,98853.8829229439
-"Burnley",18,51531.257369635925
-"Bury",45,66105.15154656912
-"Caerphilly",43,97454.49364653096
-"Calderdale",76,57505.75782401074
-"Cambridge",122,88262.32381650014
-"Camden",394,58654.12518445241
-"Cannock Chase",57,125392.0232682308
-"Canterbury",39,91646.85140837624
-"Cardiff",202,53285.57955819857
-"Carmarthenshire",67,60713.49359615258
-"Castle Point",24,54070.62557781579
-"Causeway Coast and Glens",25,97545.78823640241
-"Central Bedfordshire",85,75458.23002565507
-"Ceredigion",35,55095.18170619093
-"Charnwood",105,106132.69315620785
-"Chelmsford",57,62605.26885138238
-"Cheltenham",49,43087.20089469877
-"Cherwell",86,43056.82652349743
-"Cheshire East",191,67477.67539578765
-"Cheshire West and Chester",170,73444.14287872972
-"Chesterfield",44,57617.9532052095
-"Chichester",59,71695.08727882568
-"Chorley",46,55087.90865477649
-"City of Edinburgh",452,62153.55123774832
-"City of London",807,96825.42915814226
-"Clackmannanshire",24,54359.24272003409
-"Colchester",87,63994.615129458274
-"Conwy",44,135270.70777751875
-"Cornwall",403,113061.44620588064
-"Cotswold",56,60541.569345644886
-"County Durham",199,115344.12556936279
-"Coventry",76,119159.009608517
-"Crawley",50,137384.71039039546
-"Croydon",78,63535.13640572838
-"Cumberland",80,70150.47716066563
-"Dacorum",54,44810.52821451644
-"Darlington",37,103171.34707101085
-"Dartford",44,115947.88987821975
-"Denbighshire",56,138080.79679788006
-"Derby",59,74944.14332920311
-"Derbyshire Dales",26,77049.57097204082
-"Derry City and Strabane",27,127750.99834476928
-"Doncaster",136,57325.89714371516
-"Dorset",186,65800.10254994179
-"Dover",23,82537.41615113062
-"Dudley",126,78729.56987947816
-"Dumfries and Galloway",47,73678.74042316852
-"Dundee City",42,38651.89255877589
-"Ealing",82,92860.4508767484
-"East Ayrshire",44,106715.0432349213
-"East Cambridgeshire",58,82547.50023032166
-"East Devon",118,55411.63507148739
-"East Dunbartonshire",15,55068.72753101972
-"East Hampshire",40,74686.34786006509
-"East Hertfordshire",88,71378.30435412026
-"East Lindsey",27,51009.32811602848
-"East Lothian",21,71799.89584334848
-"East Renfrewshire",17,41394.52859285714
-"East Riding of Yorkshire",120,68892.4933463826
-"East Staffordshire",20,54016.62239337711
-"East Suffolk",72,172542.55080445585
-"Eastbourne",26,47580.065527553656
-"Eastleigh",44,98231.75033865521
-"Elmbridge",41,57288.56291517687
-"Enfield",83,61671.00459704294
-"Epping Forest",38,52991.426727547565
-"Epsom and Ewell",20,41006.21019748735
-"Erewash",37,58126.469079196206
-"Exeter",106,77456.53414568376
-"Falkirk",48,49743.39151653038
-"Fareham",43,88847.98310229676
-"Fenland",79,94381.05578383805
-"Fermanagh and Omagh",20,50744.25870518641
-"Fife",90,107304.83230877497
-"Flintshire",47,94793.92522570133
-"Folkestone and Hythe",19,163356.22772269844
-"Forest of Dean",54,120327.64357804084
-"Fylde",62,50057.240752928636
-"Gateshead",148,110073.09544148085
-"Gedling",44,72061.16273314378
-"Glasgow City",349,76042.78783454793
-"Gloucester",47,118757.92795879333
-"Gosport",22,136388.20983485825
-"Gravesham",30,65356.0611325034
-"Great Yarmouth",52,101078.89911257774
-"Greenwich",86,94196.57773537317
-"Guildford",95,55663.980481293256
-"Gwynedd",32,91320.92602250134
-"Hackney",190,69819.09326827532
-"Halton",39,95593.85314069258
-"Hammersmith and Fulham",81,93209.76052817547
-"Harborough",57,109366.21705589636
-"Haringey",39,54941.867791224555
-"Harlow",38,75223.79922694007
-"Harrow",60,160194.11650986865
-"Hart",27,99443.00320880934
-"Hartlepool",42,178001.2438410605
-"Hastings",52,111798.94847661514
-"Havant",45,57068.06005274596
-"Havering",59,113703.55758287715
-"Herefordshire, County of",70,82773.17020724055
-"Hertsmere",37,225020.14781973194
-"High Peak",34,67199.19945129288
-"Highland",113,35203.07871450901
-"Hillingdon",77,85788.9085470671
-"Hinckley and Bosworth",36,67035.47064958702
-"Horsham",55,63457.86669265397
-"Hounslow",61,121030.58067155968
-"Huntingdonshire",163,149495.09619879455
-"Hyndburn",15,134777.4885861292
-"Inverclyde",20,107820.80767518589
-"Ipswich",29,71473.42560409934
-"Isle of Anglesey",41,120372.39652549721
-"Isle of Wight",43,91833.8077961782
-"Islington",309,57057.86115270684
-"Kensington and Chelsea",82,59912.79956688764
-"King's Lynn and West Norfolk",86,76154.62437964266
-"Kingston upon Hull, City of",65,63151.77053207857
-"Kingston upon Thames",35,48164.649215540565
-"Kirklees",107,102603.63082971828
-"Knowsley",55,62084.07175521192
-"Lambeth",127,99721.98821403165
-"Lancaster",57,186526.61656908272
-"Leeds",362,52319.15265711559
-"Leicester",126,98858.93039052232
-"Lewes",42,57169.31749082293
-"Lewisham",43,41047.02738411381
-"Lichfield",40,118527.68235271685
-"Lincoln",46,132329.3519714675
-"Lisburn and Castlereagh",79,99900.04021352548
-"Liverpool",146,74783.33902272162
-"Luton",30,39445.727032495844
-"Maidstone",85,99429.58058661457
-"Maldon",18,52380.73428045655
-"Malvern Hills",46,58845.564335
-"Manchester",234,106158.06409421384
-"Mansfield",20,37200.482543466984
-"Medway",78,84662.35589546512
-"Melton",43,120009.78221280774
-"Merthyr Tydfil",5,47815.4215234175
-"Merton",66,83949.93255356126
-"Mid Devon",34,79052.57651449087
-"Mid Suffolk",47,96342.24831481303
-"Mid Sussex",62,54376.17121056922
-"Mid Ulster",59,116783.85264343204
-"Mid and East Antrim",73,63070.81541620053
-"Middlesbrough",28,91804.54439393946
-"Midlothian",52,45136.59437270738
-"Milton Keynes",140,61715.77094657522
-"Mole Valley",40,62860.623394312446
-"Monmouthshire",23,93781.40443642858
-"Moray",21,38956.22594663217
-"Na h-Eileanan Siar",4,136094.41169171428
-"Neath Port Talbot",40,117185.44909883494
-"New Forest",68,90247.56889827659
-"Newark and Sherwood",67,107691.6604016749
-"Newcastle upon Tyne",160,92452.37020616069
-"Newcastle-under-Lyme",44,52856.86060407499
-"Newham",65,74914.20643321266
-"Newport",47,41418.453066127724
-"Newry, Mourne and Down",70,96041.54967621513
-"North Ayrshire",63,74042.86611195227
-"North Devon",46,45501.69781731816
-"North East Derbyshire",34,82994.07941281427
-"North East Lincolnshire",77,63319.04866462238
-"North Hertfordshire",40,120945.33142218199
-"North Kesteven",30,119575.17403570192
-"North Lanarkshire",133,83881.25325880134
-"North Lincolnshire",47,66492.99692896269
-"North Norfolk",52,166076.13728163223
-"North Northamptonshire",147,119977.70580885827
-"North Somerset",83,129745.5437381857
-"North Tyneside",150,99179.66674435892
-"North Warwickshire",41,64745.80160487056
-"North West Leicestershire",58,84049.05279557237
-"North Yorkshire",334,131494.65231241388
-"Northumberland",144,112021.94899612205
-"Norwich",56,52815.25347457538
-"Nottingham",101,80476.44932917248
-"Nuneaton and Bedworth",19,107874.28811544928
-"Oadby and Wigston",8,75682.44911277777
-"Oldham",45,81038.96642624895
-"Orkney Islands",21,72498.52251383064
-"Oxford",65,107457.17466309624
-"Pembrokeshire",50,65251.13742341507
-"Pendle",28,123271.94757817575
-"Perth and Kinross",125,40901.163878478954
-"Peterborough",115,122613.85930194896
-"Plymouth",89,96873.17154728569
-"Portsmouth",89,119220.67590123626
-"Powys",54,92111.6239258412
-"Preston",65,119546.20492674579
-"Reading",68,162176.3034949998
-"Redbridge",63,40172.57238021231
-"Redcar and Cleveland",55,79902.05352854489
-"Redditch",27,76866.64253132339
-"Reigate and Banstead",61,86242.45337285472
-"Renfrewshire",59,107856.06492911681
-"Rhondda Cynon Taf",44,115618.91574517475
-"Ribble Valley",18,134669.18090155988
-"Richmond upon Thames",61,62998.06263699367
-"Rochdale",42,93172.53871296594
-"Rochford",46,120481.76431028124
-"Rossendale",10,77149.21107295455
-"Rother",24,53641.40251798319
-"Rotherham",63,121849.91584385869
-"Rugby",46,65364.02491280843
-"Runnymede",20,103578.26140054406
-"Rushcliffe",39,85097.81307649941
-"Rushmoor",38,85285.0117325297
-"Rutland",45,121020.6184279349
-"Salford",96,70990.9825381743
-"Sandwell",74,78795.07653460783
-"Scottish Borders",28,62939.11378464665
-"Sefton",49,83635.25482944073
-"Sevenoaks",51,64588.47795268112
-"Sheffield",145,91318.32472730793
-"Shetland Islands",8,29728.329901388912
-"Shropshire",121,114285.27232489237
-"Slough",36,79645.77152059664
-"Solihull",63,168329.01685547072
-"Somerset",324,100204.89771481564
-"South Ayrshire",49,62213.58624372923
-"South Cambridgeshire",138,51521.48970050328
-"South Derbyshire",16,58136.76598063652
-"South Gloucestershire",133,82851.14118283978
-"South Hams",45,91909.1489036192
-"South Holland",21,149285.9137963761
-"South Kesteven",77,115885.67266925937
-"South Lanarkshire",161,78943.7855419191
-"South Norfolk",71,111777.64826705218
-"South Oxfordshire",86,107196.6827230818
-"South Ribble",47,98000.20108749402
-"South Staffordshire",41,97324.78376298396
-"South Tyneside",34,77726.57704282722
-"Southampton",53,104064.98702880113
-"Southend-on-Sea",47,110206.19281085722
-"Southwark",174,110070.11595578997
-"Spelthorne",28,52805.81165524169
-"St Albans",75,65242.238924438796
-"St. Helens",51,122634.96299483231
-"Stafford",71,60944.77183454398
-"Staffordshire Moorlands",46,126557.70598897459
-"Stevenage",17,176014.61350771363
-"Stirling",36,29672.561782197157
-"Stockport",80,48458.61793469707
-"Stockton-on-Tees",67,96248.41583007564
-"Stoke-on-Trent",56,85801.12771561969
-"Stratford-on-Avon",123,116516.85409679232
-"Stroud",83,84684.62357791906
-"Sunderland",98,102400.42793994377
-"Surrey Heath",28,61550.60021543056
-"Sutton",41,64328.238827446396
-"Swale",54,110844.70601354884
-"Swansea",51,49752.99240072363
-"Swindon",59,69727.2433923809
-"Tameside",56,111565.4358036209
-"Tamworth",9,117570.69929429908
-"Tandridge",54,105383.25057485953
-"Teignbridge",64,103001.71639117064
-"Telford and Wrekin",81,69057.26779575135
-"Tendring",21,76518.43404636534
-"Test Valley",69,118079.19861597924
-"Tewkesbury",54,146045.5562599461
-"Thanet",23,100520.63272866065
-"Three Rivers",64,107392.28248506975
-"Thurrock",94,96968.40892133508
-"Tonbridge and Malling",91,111180.04804888317
-"Torbay",17,58038.25046433962
-"Torfaen",22,51683.15515437482
-"Torridge",53,118055.47616602227
-"Tower Hamlets",170,81040.0764103577
-"Trafford",160,91869.27211409395
-"Tunbridge Wells",40,95139.69759028083
-"Uttlesford",48,74154.01488487853
-"Vale of Glamorgan",23,49814.896327775
-"Vale of White Horse",149,101623.4904236697
-"Wakefield",77,54015.81442214014
-"Walsall",65,91859.84651903852
-"Waltham Forest",42,52548.5861357967
-"Wandsworth",113,100494.79807201638
-"Warrington",118,46326.249104192735
-"Warwick",80,78722.62999525828
-"Watford",36,44438.50847139138
-"Waverley",66,47343.095574212435
-"Wealden",86,118639.94011530625
-"Welwyn Hatfield",28,55114.83235300703
-"West Berkshire",89,96393.43151562203
-"West Devon",15,56380.76453329884
-"West Dunbartonshire",18,82646.87185356132
-"West Lancashire",44,53072.18192398858
-"West Lindsey",35,81438.66639278825
-"West Lothian",67,48388.0657939182
-"West Northamptonshire",145,98568.12458697216
-"West Oxfordshire",70,114298.91464667558
-"West Suffolk",112,141956.59858954407
-"Westminster",883,99671.80126186355
-"Westmorland and Furness",118,119413.61405876893
-"Wigan",89,92089.77343253019
-"Wiltshire",198,97752.00613017415
-"Winchester",94,73545.04067626249
-"Windsor and Maidenhead",134,98231.09030009729
-"Wirral",116,95313.06568291984
-"Woking",26,101269.47724293915
-"Wokingham",59,63558.081429262646
-"Wolverhampton",45,83313.62843119832
-"Worcester",40,43737.39007787635
-"Worthing",44,98765.10426462383
-"Wrexham",59,113005.99721245632
-"Wychavon",62,76219.65925304059
-"Wyre",43,60949.82067873508
-"Wyre Forest",29,53623.42475136254
-"York",75,125394.43683218533
-NA,45,145078.2127803624
+﻿LAD23NM,No_Companies,GVAPerJob,
+Argyll and Bute, 27 ," 29,598 ",
+Stirling, 36 ," 29,673 ",
+Shetland Islands, 8 ," 29,728 ",
+Angus, 39 ," 30,771 ",
+Aberdeenshire, 79 ," 30,917 ",
+Highland, 113 ," 35,203 ",
+Mansfield, 20 ," 37,200 ",
+Dundee City, 42 ," 38,652 ",
+Moray, 21 ," 38,956 ",
+Adur, 45 ," 39,292 ",
+Luton, 30 ," 39,446 ",
+Redbridge, 63 ," 40,173 ",
+Perth and Kinross, 125 ," 40,901 ",
+Epsom and Ewell, 20 ," 41,006 ",
+Lewisham, 43 ," 41,047 ",
+East Renfrewshire, 17 ," 41,395 ",
+Newport, 47 ," 41,418 ",
+Aberdeen City, 233 ," 41,703 ",
+Cherwell, 86 ," 43,057 ",
+Cheltenham, 49 ," 43,087 ",
+Worcester, 40 ," 43,737 ",
+Watford, 36 ," 44,439 ",
+Basingstoke and Deane, 64 ," 44,473 ",
+Dacorum, 54 ," 44,811 ",
+Midlothian, 52 ," 45,137 ",
+North Devon, 46 ," 45,502 ",
+Warrington, 118 ," 46,326 ",
+Waverley, 66 ," 47,343 ",
+Eastbourne, 26 ," 47,580 ",
+Merthyr Tydfil, 5 ," 47,815 ",
+Kingston upon Thames, 35 ," 48,165 ",
+West Lothian, 67 ," 48,388 ",
+Stockport, 80 ," 48,459 ",
+Falkirk, 48 ," 49,743 ",
+Swansea, 51 ," 49,753 ",
+Vale of Glamorgan, 23 ," 49,815 ",
+Fylde, 62 ," 50,057 ",
+Fermanagh and Omagh, 20 ," 50,744 ",
+East Lindsey, 27 ," 51,009 ",
+Bolton, 71 ," 51,469 ",
+South Cambridgeshire, 138 ," 51,521 ",
+Burnley, 18 ," 51,531 ",
+Torfaen, 22 ," 51,683 ",
+Leeds, 362 ," 52,319 ",
+Maldon, 18 ," 52,381 ",
+Waltham Forest, 42 ," 52,549 ",
+Spelthorne, 28 ," 52,806 ",
+Norwich, 56 ," 52,815 ",
+Newcastle-under-Lyme, 44 ," 52,857 ",
+Epping Forest, 38 ," 52,991 ",
+West Lancashire, 44 ," 53,072 ",
+Cardiff, 202 ," 53,286 ",
+Wyre Forest, 29 ," 53,623 ",
+Rother, 24 ," 53,641 ",
+Amber Valley, 31 ," 53,900 ",
+Wakefield, 77 ," 54,016 ",
+East Staffordshire, 20 ," 54,017 ",
+Castle Point, 24 ," 54,071 ",
+Clackmannanshire, 24 ," 54,359 ",
+Mid Sussex, 62 ," 54,376 ",
+Bolsover, 10 ," 54,926 ",
+Haringey, 39 ," 54,942 ",
+East Dunbartonshire, 15 ," 55,069 ",
+Chorley, 46 ," 55,088 ",
+Ceredigion, 35 ," 55,095 ",
+Welwyn Hatfield, 28 ," 55,115 ",
+East Devon, 118 ," 55,412 ",
+Ashfield, 17 ," 55,437 ",
+Guildford, 95 ," 55,664 ",
+West Devon, 15 ," 56,381 ",
+Bridgend, 53 ," 56,738 ",
+Islington, 309 ," 57,058 ",
+Havant, 45 ," 57,068 ",
+Lewes, 42 ," 57,169 ",
+Elmbridge, 41 ," 57,289 ",
+Doncaster, 136 ," 57,326 ",
+Calderdale, 76 ," 57,506 ",
+Chesterfield, 44 ," 57,618 ",
+Torbay, 17 ," 58,038 ",
+Erewash, 37 ," 58,126 ",
+South Derbyshire, 16 ," 58,137 ",
+Camden, 394 ," 58,654 ",
+Malvern Hills, 46 ," 58,846 ",
+Brighton and Hove, 104 ," 59,028 ",
+Ards and North Down, 26 ," 59,817 ",
+Kensington and Chelsea, 82 ," 59,913 ",
+Belfast, 202 ," 60,239 ",
+Cotswold, 56 ," 60,542 ",
+"Armagh City, Banbridge and Craigavon", 49 ," 60,643 ",
+Carmarthenshire, 67 ," 60,713 ",
+Stafford, 71 ," 60,945 ",
+Wyre, 43 ," 60,950 ",
+Surrey Heath, 28 ," 61,551 ",
+Enfield, 83 ," 61,671 ",
+Milton Keynes, 140 ," 61,716 ",
+Knowsley, 55 ," 62,084 ",
+City of Edinburgh, 452 ," 62,154 ",
+South Ayrshire, 49 ," 62,214 ",
+Chelmsford, 57 ," 62,605 ",
+Mole Valley, 40 ," 62,861 ",
+Scottish Borders, 28 ," 62,939 ",
+Richmond upon Thames, 61 ," 62,998 ",
+Mid and East Antrim, 73 ," 63,071 ",
+"Kingston upon Hull, City of", 65 ," 63,152 ",
+North East Lincolnshire, 77 ," 63,319 ",
+Horsham, 55 ," 63,458 ",
+Croydon, 78 ," 63,535 ",
+Wokingham, 59 ," 63,558 ",
+Colchester, 87 ," 63,995 ",
+Sutton, 41 ," 64,328 ",
+Sevenoaks, 51 ," 64,588 ",
+Barnsley, 118 ," 64,706 ",
+North Warwickshire, 41 ," 64,746 ",
+St Albans, 75 ," 65,242 ",
+Pembrokeshire, 50 ," 65,251 ",
+Gravesham, 30 ," 65,356 ",
+Rugby, 46 ," 65,364 ",
+Dorset, 186 ," 65,800 ",
+Bedford, 74 ," 65,984 ",
+"Bournemouth, Christchurch and Poole", 127 ," 66,059 ",
+Bury, 45 ," 66,105 ",
+North Lincolnshire, 47 ," 66,493 ",
+Hinckley and Bosworth, 36 ," 67,035 ",
+High Peak, 34 ," 67,199 ",
+Cheshire East, 191 ," 67,478 ",
+Bexley, 61 ," 67,647 ",
+Bassetlaw, 51 ," 68,774 ",
+East Riding of Yorkshire, 120 ," 68,892 ",
+Telford and Wrekin, 81 ," 69,057 ",
+Swindon, 59 ," 69,727 ",
+Hackney, 190 ," 69,819 ",
+Cumberland, 80 ," 70,150 ",
+Salford, 96 ," 70,991 ",
+East Hertfordshire, 88 ," 71,378 ",
+Ipswich, 29 ," 71,473 ",
+Chichester, 59 ," 71,695 ",
+East Lothian, 21 ," 71,800 ",
+Gedling, 44 ," 72,061 ",
+Barking and Dagenham, 60 ," 72,220 ",
+Orkney Islands, 21 ," 72,499 ",
+Cheshire West and Chester, 170 ," 73,444 ",
+Winchester, 94 ," 73,545 ",
+Dumfries and Galloway, 47 ," 73,679 ",
+North Ayrshire, 63 ," 74,043 ",
+Uttlesford, 48 ," 74,154 ",
+East Hampshire, 40 ," 74,686 ",
+Liverpool, 146 ," 74,783 ",
+Blackburn with Darwen, 34 ," 74,912 ",
+Newham, 65 ," 74,914 ",
+Derby, 59 ," 74,944 ",
+Broxtowe, 30 ," 75,142 ",
+Harlow, 38 ," 75,224 ",
+Central Bedfordshire, 85 ," 75,458 ",
+Oadby and Wigston, 8 ," 75,682 ",
+Glasgow City, 349 ," 76,043 ",
+King's Lynn and West Norfolk, 86 ," 76,155 ",
+Wychavon, 62 ," 76,220 ",
+Tendring, 21 ," 76,518 ",
+Redditch, 27 ," 76,867 ",
+Derbyshire Dales, 26 ," 77,050 ",
+Rossendale, 10 ," 77,149 ",
+Exeter, 106 ," 77,457 ",
+Antrim and Newtownabbey, 40 ," 77,724 ",
+South Tyneside, 34 ," 77,727 ",
+Warwick, 80 ," 78,723 ",
+Dudley, 126 ," 78,730 ",
+Sandwell, 74 ," 78,795 ",
+South Lanarkshire, 161 ," 78,944 ",
+Mid Devon, 34 ," 79,053 ",
+Blaenau Gwent, 10 ," 79,612 ",
+Slough, 36 ," 79,646 ",
+Redcar and Cleveland, 55 ," 79,902 ",
+Nottingham, 101 ," 80,476 ",
+Bradford, 114 ," 80,751 ",
+Oldham, 45 ," 81,039 ",
+Tower Hamlets, 170 ," 81,040 ",
+Blackpool, 29 ," 81,053 ",
+West Lindsey, 35 ," 81,439 ",
+Dover, 23 ," 82,537 ",
+East Cambridgeshire, 58 ," 82,548 ",
+West Dunbartonshire, 18 ," 82,647 ",
+"Herefordshire, County of", 70 ," 82,773 ",
+South Gloucestershire, 133 ," 82,851 ",
+North East Derbyshire, 34 ," 82,994 ",
+Wolverhampton, 45 ," 83,314 ",
+Sefton, 49 ," 83,635 ",
+Birmingham, 270 ," 83,650 ",
+North Lanarkshire, 133 ," 83,881 ",
+Merton, 66 ," 83,950 ",
+North West Leicestershire, 58 ," 84,049 ",
+Medway, 78 ," 84,662 ",
+Stroud, 83 ," 84,685 ",
+Rushcliffe, 39 ," 85,098 ",
+Rushmoor, 38 ," 85,285 ",
+Hillingdon, 77 ," 85,789 ",
+Stoke-on-Trent, 56 ," 85,801 ",
+Reigate and Banstead, 61 ," 86,242 ",
+Bromley, 63 ," 87,443 ",
+Cambridge, 122 ," 88,262 ",
+Fareham, 43 ," 88,848 ",
+New Forest, 68 ," 90,248 ",
+"Bristol, City of", 339 ," 91,224 ",
+Sheffield, 145 ," 91,318 ",
+Gwynedd, 32 ," 91,321 ",
+Canterbury, 39 ," 91,647 ",
+Middlesbrough, 28 ," 91,805 ",
+Isle of Wight, 43 ," 91,834 ",
+Walsall, 65 ," 91,860 ",
+Trafford, 160 ," 91,869 ",
+South Hams, 45 ," 91,909 ",
+Wigan, 89 ," 92,090 ",
+Powys, 54 ," 92,112 ",
+Newcastle upon Tyne, 160 ," 92,452 ",
+Ealing, 82 ," 92,860 ",
+Rochdale, 42 ," 93,173 ",
+Hammersmith and Fulham, 81 ," 93,210 ",
+Monmouthshire, 23 ," 93,781 ",
+Barnet, 126 ," 93,970 ",
+Greenwich, 86 ," 94,197 ",
+Fenland, 79 ," 94,381 ",
+Blaby, 48 ," 94,670 ",
+Flintshire, 47 ," 94,794 ",
+Tunbridge Wells, 40 ," 95,140 ",
+Wirral, 116 ," 95,313 ",
+Halton, 39 ," 95,594 ",
+"Newry, Mourne and Down", 70 ," 96,042 ",
+Stockton-on-Tees, 67 ," 96,248 ",
+Mid Suffolk, 47 ," 96,342 ",
+West Berkshire, 89 ," 96,393 ",
+City of London, 807 ," 96,825 ",
+Plymouth, 89 ," 96,873 ",
+Thurrock, 94 ," 96,968 ",
+South Staffordshire, 41 ," 97,325 ",
+Caerphilly, 43 ," 97,454 ",
+Causeway Coast and Glens, 25 ," 97,546 ",
+Wiltshire, 198 ," 97,752 ",
+South Ribble, 47 ," 98,000 ",
+Windsor and Maidenhead, 134 ," 98,231 ",
+Eastleigh, 44 ," 98,232 ",
+West Northamptonshire, 145 ," 98,568 ",
+Worthing, 44 ," 98,765 ",
+Buckinghamshire, 264 ," 98,854 ",
+Leicester, 126 ," 98,859 ",
+North Tyneside, 150 ," 99,180 ",
+Maidstone, 85 ," 99,430 ",
+Hart, 27 ," 99,443 ",
+Westminster, 883 ," 99,672 ",
+Lambeth, 127 ," 99,722 ",
+Lisburn and Castlereagh, 79 ," 99,900 ",
+Somerset, 324 ," 100,205 ",
+Wandsworth, 113 ," 100,495 ",
+Thanet, 23 ," 100,521 ",
+Great Yarmouth, 52 ," 101,079 ",
+Woking, 26 ," 101,269 ",
+Vale of White Horse, 149 ," 101,623 ",
+Sunderland, 98 ," 102,400 ",
+Kirklees, 107 ," 102,604 ",
+Teignbridge, 64 ," 103,002 ",
+Darlington, 37 ," 103,171 ",
+Runnymede, 20 ," 103,578 ",
+Southampton, 53 ," 104,065 ",
+Tandridge, 54 ," 105,383 ",
+Charnwood, 105 ," 106,133 ",
+Manchester, 234 ," 106,158 ",
+Breckland, 62 ," 106,387 ",
+East Ayrshire, 44 ," 106,715 ",
+South Oxfordshire, 86 ," 107,197 ",
+Fife, 90 ," 107,305 ",
+Three Rivers, 64 ," 107,392 ",
+Oxford, 65 ," 107,457 ",
+Newark and Sherwood, 67 ," 107,692 ",
+Braintree, 36 ," 107,769 ",
+Inverclyde, 20 ," 107,821 ",
+Renfrewshire, 59 ," 107,856 ",
+Nuneaton and Bedworth, 19 ," 107,874 ",
+Harborough, 57 ," 109,366 ",
+Southwark, 174 ," 110,070 ",
+Gateshead, 148 ," 110,073 ",
+Southend-on-Sea, 47 ," 110,206 ",
+Swale, 54 ," 110,845 ",
+Tonbridge and Malling, 91 ," 111,180 ",
+Tameside, 56 ," 111,565 ",
+South Norfolk, 71 ," 111,778 ",
+Hastings, 52 ," 111,799 ",
+Brent, 59 ," 111,808 ",
+Northumberland, 144 ," 112,022 ",
+Wrexham, 59 ," 113,006 ",
+Cornwall, 403 ," 113,061 ",
+Havering, 59 ," 113,704 ",
+Shropshire, 121 ," 114,285 ",
+West Oxfordshire, 70 ," 114,299 ",
+County Durham, 199 ," 115,344 ",
+Rhondda Cynon Taf, 44 ," 115,619 ",
+South Kesteven, 77 ," 115,886 ",
+Dartford, 44 ," 115,948 ",
+Stratford-on-Avon, 123 ," 116,517 ",
+Mid Ulster, 59 ," 116,784 ",
+Neath Port Talbot, 40 ," 117,185 ",
+Basildon, 62 ," 117,268 ",
+Tamworth, 9 ," 117,571 ",
+Torridge, 53 ," 118,055 ",
+Test Valley, 69 ," 118,079 ",
+Lichfield, 40 ," 118,528 ",
+Wealden, 86 ," 118,640 ",
+Gloucester, 47 ," 118,758 ",
+Coventry, 76 ," 119,159 ",
+Portsmouth, 89 ," 119,221 ",
+Westmorland and Furness, 118 ," 119,414 ",
+Arun, 70 ," 119,534 ",
+Preston, 65 ," 119,546 ",
+North Kesteven, 30 ," 119,575 ",
+Broxbourne, 60 ," 119,843 ",
+North Northamptonshire, 147 ," 119,978 ",
+Melton, 43 ," 120,010 ",
+Forest of Dean, 54 ," 120,328 ",
+Isle of Anglesey, 41 ," 120,372 ",
+Rochford, 46 ," 120,482 ",
+North Hertfordshire, 40 ," 120,945 ",
+Rutland, 45 ," 121,021 ",
+Hounslow, 61 ," 121,031 ",
+Rotherham, 63 ," 121,850 ",
+Bromsgrove, 45 ," 122,305 ",
+Peterborough, 115 ," 122,614 ",
+St. Helens, 51 ," 122,635 ",
+Pendle, 28 ," 123,272 ",
+Bracknell Forest, 37 ," 123,655 ",
+Cannock Chase, 57 ," 125,392 ",
+York, 75 ," 125,394 ",
+Ashford, 70 ," 126,111 ",
+Staffordshire Moorlands, 46 ," 126,558 ",
+Babergh, 21 ," 126,750 ",
+Broadland, 41 ," 126,984 ",
+Derry City and Strabane, 27 ," 127,751 ",
+North Somerset, 83 ," 129,746 ",
+North Yorkshire, 334 ," 131,495 ",
+Lincoln, 46 ," 132,329 ",
+Ribble Valley, 18 ," 134,669 ",
+Hyndburn, 15 ," 134,777 ",
+Conwy, 44 ," 135,271 ",
+Na h-Eileanan Siar, 4 ," 136,094 ",
+Gosport, 22 ," 136,388 ",
+Crawley, 50 ," 137,385 ",
+Denbighshire, 56 ," 138,081 ",
+West Suffolk, 112 ," 141,957 ",
+NA, 45 ," 145,078 ",
+Tewkesbury, 54 ," 146,046 ",
+South Holland, 21 ," 149,286 ",
+Huntingdonshire, 163 ," 149,495 ",
+Brentwood, 40 ," 152,184 ",
+Harrow, 60 ," 160,194 ",
+Reading, 68 ," 162,176 ",
+Folkestone and Hythe, 19 ," 163,356 ",
+North Norfolk, 52 ," 166,076 ",
+Solihull, 63 ," 168,329 ",
+Boston, 10 ," 170,261 ",
+East Suffolk, 72 ," 172,543 ",
+Stevenage, 17 ," 176,015 ",
+Hartlepool, 42 ," 178,001 ",
+Bath and North East Somerset, 66 ," 178,250 ",
+Lancaster, 57 ," 186,527 ",
+Hertsmere, 37 ," 225,020 ", 2.55 
