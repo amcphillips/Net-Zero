@@ -141,7 +141,7 @@ North_GVA_per_job <-regions %>%
   group_by(LAD23NM) %>%
   summarise(No_Companies = n(), GVAPerJob = sum(BestEstimateCurrentGVA)/sum(BestEstimateCurrentEmployees))
 
-write_excel_csv(LA_GVA_per_job,"outputs/North_reg_address_GVA_per_job.csv")
+write_excel_csv(North_GVA_per_job,"outputs/North_reg_address_GVA_per_job.csv")
 
 north_map_data2 <- 
   left_join(North_GVA_per_job, lad_boundaries, by = c("LAD23NM" = "LAD23NM")) %>%
