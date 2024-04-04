@@ -82,17 +82,17 @@ map_data <-
   distinct()
 
 
-ggplot(map_data, aes(fill = log(GVA))) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
+ggplot(map_data, aes(fill = GVA)) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
   ggtitle("GVA by registered address\n of Net Zero companies") + theme_void()
 
 ggsave("outputs/GVA.png")
 
-ggplot(map_data, aes(fill = log(No_Companies))) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
+ggplot(map_data, aes(fill = No_Companies)) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
   ggtitle("Registered address of\n Net Zero companies") + theme_void()
 
 ggsave("outputs/companies.png")
 
-ggplot(map_data, aes(fill = log(Employees))) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
+ggplot(map_data, aes(fill = Employees)) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
   ggtitle("Number of employees by registered\n address of Net Zero companies") + theme_void()
 
 ggsave("outputs/employees.png")
@@ -102,7 +102,7 @@ map_data2 <-
   replace(is.na(.), 0) %>%
   distinct()
 
-ggplot(map_data2, aes(fill = log(GVAPerJob))) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
+ggplot(map_data2, aes(fill = GVAPerJob)) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
   ggtitle("GVA per job by registered address\n of Net Zero companies") + theme_void()
 
 ggsave("outputs/GVA_per_job.png")
