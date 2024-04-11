@@ -62,10 +62,13 @@ sites <- left_join(sites, geog_look_up, by = c("Postcode" = "pcds"))
 
 sites <- left_join(sites, coord, by = c("Postcode" = "pcds"))
 
-#geog2 <- read_csv("WD_to_LAD_to_CTY_to_RGN_to_CTRY_2023.csv") %>%
-  #select(LAD23CD, LAD23NM, RGN23CD, RGN23NM)
+geog2 <- read_csv("WD_to_LAD_to_CTY_to_RGN_to_CTRY_2023.csv") %>%
+  select(LAD23CD, LAD23NM, RGN23CD, RGN23NM)
 
-#geog2 <- distinct(geog2)
+geog2 <- distinct(geog2)
+
+sites <- left_join(sites, geog2, by = c("ladcd" = "LAD23CD"))
+
 ITL2 <- ITL_lookup%>%
   select(LAD23CD, ITL221CD, ITL221NM) %>%
   distinct()
@@ -127,46 +130,46 @@ ggsave("outputs/ITL2_all_sites_GVA_per_job.png")
 
 north <- sites %>%
   filter(RGN23CD == "E12000001" | RGN23CD == "E12000002" | RGN23CD == "E12000003") %>%
-  group_by(LAD23NM) %>%
+  group_by(ITL221NM) %>%
   summarise(No_sites = n(), GVA = sum(GVA_per_site), Turnover = sum(turn_per_site), Employees = sum(empl_per_site), 
             InnovateFunding = sum(Innovate_per_site), DealroomFunding = sum(Dealroom_per_site))
 
-write_excel_csv(north,"outputs/North_LAs_all_sites.csv")
+write_excel_csv(north, "outputs/North_ITL2_all_sites.csv")
 
 north_map_data <- 
-  left_join(north, lad_boundaries, by = c("LAD23NM" = "LAD23NM")) %>%
+  left_join(north, ITL2_boundaries, by = c("ITL221NM" = "ITL221NM")) %>%
   replace(is.na(.), 0) %>%
   distinct()
 
 ggplot(north_map_data, aes(fill = GVA)) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
   ggtitle("GVA of all sites\n of Net Zero companies") + theme_void()
 
-ggsave("outputs/north_all_sites_GVA.png")
+ggsave("outputs/north_ITL2_all_sites_GVA.png")
 
 ggplot(north_map_data, aes(fill = No_sites)) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
   ggtitle("All sites of\n Net Zero companies") + theme_void()
 
-ggsave("outputs/north_all_sites_companies.png")
+ggsave("outputs/north_ITL2_all_sites_companies.png")
 
 ggplot(north_map_data, aes(fill = Employees)) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
   ggtitle("Number of employees by all\n sites of Net Zero companies") + theme_void()
 
-ggsave("outputs/north_all_sites_employees.png")
+ggsave("outputs/north_ITL2_all_sites_employees.png")
 
 North_GVA_per_job_all_sites <- sites %>%
   filter(BestEstimateCurrentGVA>0, BestEstimateCurrentEmployees>0, RGN23CD == "E12000001" | RGN23CD == "E12000002" | RGN23CD == "E12000003") %>%
   mutate(GVAPerJob = BestEstimateCurrentGVA/BestEstimateCurrentEmployees) %>%
-  group_by(LAD23NM) %>%
+  group_by(ITL221NM) %>%
   summarise(No_sites = n(), GVAPerJob = sum(BestEstimateCurrentGVA)/sum(BestEstimateCurrentEmployees))
 
-write_excel_csv(North_GVA_per_job_all_sites, "outputs/North_all_sites_GVA_job.csv")
+write_excel_csv(North_GVA_per_job_all_sites, "outputs/North_ITL2_all_sites_GVA_job.csv")
 
 north_map_data2 <- 
-  left_join(North_GVA_per_job_all_sites, lad_boundaries, by = c("LAD23NM" = "LAD23NM")) %>%
+  left_join(North_GVA_per_job_all_sites, ITL2_boundaries, by = c("ITL221NM" = "ITL221NM")) %>%
   replace(is.na(.), 0) %>%
   distinct()
 
 ggplot(north_map_data2, aes(fill = GVAPerJob)) + aes(geometry = geometry) + geom_sf() + scale_fill_continuous() + 
   ggtitle("GVA per job of all sites\n of Net Zero companies") + theme_void()
 
-ggsave("outputs/North_all_sites_GVA_per_job.png")
+ggsave("outputs/North_ITL2_all_sites_GVA_per_job.png")
